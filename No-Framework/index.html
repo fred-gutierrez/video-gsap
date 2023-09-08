@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import "styles.css"
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    gsap.set
+    <section>
+      <span class="box1">This will move to the right</span>
+    </section>
+    gsap.to
+    <section>
+      <span class="box2">This will move to the right, but smoothly.</span>
+    </section>
+    gsap.from
+    <div class="text-container">
+      <h1>
+        "This is a beatiful looking title,<br />
+        keep looking at it."
+      </h1>
+      <button class="text-container">Press here?</button>
+    </div>
+    gsap.fromTo
+    <section class="circle-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </section>
+    gsap.timeline()
+    <section class="box-container">
+      <div class="box green"></div>
+      <div class="box purple"></div>
+      <div class="box orange"></div>
+    </section>
+
+    <script>
+      // gsap.set
+      gsap.set(".box1", {
+        delay: 2,
+        x: 550,
+      });
+
+      // gsap.to
+      gsap.to(".box2", {
+        duration: 3,
+        x: 550,
+      });
+
+      // gsap.from
+      gsap.from(".text-container", {
+        duration: 1,
+        opacity: 0,
+        y: 200,
+        stagger: .5,
+      });
+       
+      // gsap.fromTo
+      gsap.fromTo(
+        ".circle",
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          duration: 1,
+          y: 0,
+          opacity: 1,
+          stagger: 1,
+          delay: 1.5,
+        }
+      );
+
+      // gsap,timeline
+      gsap.timeline()
+      let tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
+
+      tl.from(".green", { y: 50 });
+      tl.from(".purple", { y: 25 });
+      tl.from(".orange", { y: 75 });
+    </script>
+  </body>
+</html>

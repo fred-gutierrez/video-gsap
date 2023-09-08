@@ -1,0 +1,68 @@
+body {
+  height: 100vh;
+  font-family: system-ui, -apple-system;
+}
+
+/* gsap.set & gsap.to */
+.box1,
+.box2 {
+  border-radius: 20px;
+  background-color: crimson;
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* gsap.from */
+.text-container {
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* gsa.fromTo */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.circle {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: crimson;
+  margin: 20px;
+}
+.circle:nth-child(2) {
+  background-color: coral;
+}
+.circle:nth-child(3) {
+  background-color: green;
+}
+.circle:nth-child(4) {
+  background-color: dodgerblue;
+}
+.circle:nth-child(5) {
+  background-color: gold;
+}
+
+/* gsap.timeline() */
+.box-container {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  display: inline-block;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.orange {
+  background-color: orange;
+}
